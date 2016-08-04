@@ -1,0 +1,2 @@
+# BilgeKolejProject
+Projeyi toparlanıyor .
