@@ -1,0 +1,133 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section RootStyle{
+    @RenderSection("Style", required: false)
+}
+<div class="page-sidebar nav-collapse collapse">
+    <!-- BEGIN SIDEBAR MENU -->
+    <ul>
+        <li>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            <div class="sidebar-toggler hidden-phone"></div>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        </li>
+        <li>
+            <!-- Arama Motoru -->
+            <form class="sidebar-search">
+                <div class="input-box">
+                    <a href="javascript:;" class="remove"></a>
+                    <input type="text" placeholder="Ara..." />
+                    <input type="button" class="submit" value=" " />
+                </div>
+            </form>
+        </li>
+
+        <li class="start active ">
+            <a href="@Url.Action("Index","Yonetim")">
+                <i class="icon-home"></i>
+                <span class="title">Ana Sayfa</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <li class="has-sub ">
+            <a href="javascript:;">
+                <i class="icon-bookmark-empty"></i>
+                <span class="title">Öğretmenler</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub">
+                <li><a href="ui_general.html">Öğretmen Listesi</a></li>
+                <li><a href="ui_buttons.html">Öğretmen Ekle</a></li>
+
+            </ul>
+        </li>
+        <li class="has-sub ">
+            <a href="javascript:;">
+                <i class="icon-bookmark-empty"></i>
+                <span class="title">Veliler</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub">
+                <li><a href="ui_general.html">Veli Listesi</a></li>
+                <li><a href="ui_buttons.html">Veli Ekle</a></li>
+            </ul>
+        </li>
+        <li class="has-sub ">
+            <a href="javascript:;">
+                <i class="icon-bookmark-empty"></i>
+                <span class="title">Öğrenciler</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub">
+                <li><a href="ui_general.html">Öğrenci Listesi</a></li>
+                <li><a href="ui_buttons.html">Öğrenci Ekle</a></li>
+
+            </ul>
+        </li>
+
+        <li class="has-sub ">
+            <a href="javascript:;">
+                <i class="icon-bookmark-empty"></i>
+                <span class="title">Diğer İşlemler</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub">
+                <li><a href="@Url.Action("OgretmenDurumListesi")">Hoca Durumları</a></li>
+                <li><a href="@Url.Action("OgretmenBransListesi")">Hoca Branşları</a></li>
+
+                <li><a href="@Url.Action("OgrenciDurumListesi")">Öğrenci Durumları</a></li>
+                <li><a href="@Url.Action("DevamsizlikDurumListesi")" title="Öğrenci Devamsızlık Durumu">Öğrenci Devamsızlık D.</a></li>
+                <li><a href="@Url.Action("BitirdigiOkulListesi")">Diğer Okullar</a></li>
+                <li><a href="@Url.Action("GunlerListesi")">Günler</a></li>
+
+                <li><a href="@Url.Action("Siniflar")">Sınıflar</a></li>
+                <li><a href="@Url.Action("DersListesi")">Eğitim Dersleri</a></li>
+
+            </ul>
+        </li>
+        <li class="">
+            <a href="@Url.Action("Cikis","Anasayfa")">
+                <i class="icon-user"></i>
+                <span class="title">Oturumu Kapat</span>
+            </a>
+        </li>
+    </ul>
+    <!-- END SIDEBAR MENU -->
+</div>
+
+<div class="page-content">
+    <div class="container-fluid">
+        <!-- BEGIN PAGE HEADER-->
+        <div class="row-fluid">
+            <div class="span12">
+                <h3 class="page-title">
+                    Bilge Koleji
+                    <small>Yapılan Yönetim Paneli</small>
+                </h3>
+                <div class="progress progress-striped active">
+                    <div style="width: 30%;" class="bar"></div>
+                </div>
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home"></i>
+                        <a href="index.html">Ana Sayfa</a>
+                        <i class="icon-angle-right"></i>
+                    </li>
+                    <li><a href="#">@ViewBag.Title</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        @RenderBody()
+
+
+    </div>
+</div>
+@section RootScripts{
+    @RenderSection("Scripts",required:false)
+    }
+@section RootApp{
+    @RenderSection("App", required: false)
+}
