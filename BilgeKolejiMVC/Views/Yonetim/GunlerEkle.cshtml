@@ -1,0 +1,47 @@
+  @using System.Web.Optimization
+@model BilgeKolejProject.SinifGun
+
+@{
+    ViewBag.Title = "Gun Ekle";
+    Layout = "~/Views/Shared/_YonetimLayout.cshtml";
+}
+
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN VALIDATION STATES-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <h4><i class="icon-reorder"></i>@ViewBag.Title</h4>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"></a>
+                </div>
+            </div>
+            <div class="portlet-body form">
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <div class="control-group">
+                        <label class="control-label">
+                            @Html.LabelFor(model => model.GunAdi)
+                        </label>
+                        <div class="controls">
+                            @Html.EditorFor(model => model.GunAdi, new { @class = "span6 m-wrap" })
+                            @Html.ValidationMessageFor(model => model.GunAdi, null, new { @class = "help-inline" })
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn purple">Kaydet</button>
+                        <a href="@Url.Action("GunlerListesi")" class="btn">İptal</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+}
