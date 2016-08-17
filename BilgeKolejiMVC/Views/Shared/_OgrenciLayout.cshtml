@@ -1,0 +1,90 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-sidebar nav-collapse collapse">
+    <!-- BEGIN SIDEBAR MENU -->
+    <ul>
+        <li>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            <div class="sidebar-toggler hidden-phone"></div>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        </li>
+        <li>
+
+        </li>
+        <li class="start active ">
+            <a href="@Url.Action("Index","Ogrenci")">
+                <i class="icon-home"></i>
+                <span class="title">Ana Sayfa</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <li class="has-sub ">
+            <a href="javascript:;">
+                <i class="icon-bookmark-empty"></i>
+                <span class="title">UI Features</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub">
+                <li><a href="ui_general.html">General</a></li>
+                <li><a href="ui_buttons.html">Buttons</a></li>
+
+            </ul>
+        </li>
+        <li class="has-sub ">
+            <a href="javascript:;">
+                <i class="icon-table"></i>
+                <span class="title">Form Stuff</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub">
+                <li><a href="form_layout.html">Form Layouts</a></li>
+                <li><a href="form_samples.html">Advance Form Samples</a></li>
+                <li><a href="form_component.html">Form Components</a></li>
+
+            </ul>
+        </li>
+        
+
+        <li class="">
+            <a href="@Url.Action("Cikis","Anasayfa")">
+                <i class="icon-user"></i>
+                <span class="title">Oturumu Kapat</span>
+            </a>
+        </li>
+    </ul>
+    <!-- END SIDEBAR MENU -->
+</div>
+
+<div class="page-content">
+    <div class="container-fluid">
+        <!-- BEGIN PAGE HEADER-->
+        <div class="row-fluid">
+            <div class="span12">
+                <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                <h3 class="page-title">
+                    Bilge Koleji
+                    <small>Yapılan Öğrenci Paneli</small>
+                </h3>
+                <div class="progress progress-striped active">
+                    <div style="width: 5%;" class="bar"></div>
+                </div>
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home"></i>
+                        <a href="@Url.Action("Index","Ogrenci")">Ana Sayfa</a>
+                        <i class="icon-angle-right"></i>
+                    </li>
+                    <li><a href="#">@ViewBag.Title</a></li>
+
+                </ul>
+                <!-- END PAGE TITLE & BREADCRUMB-->
+            </div>
+        </div>
+
+        <div id="dashboard">
+            @RenderBody()
+        </div>
+
+    </div>
+</div>
