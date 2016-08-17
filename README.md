@@ -5,7 +5,7 @@ Bilge Adam Proje Bitirme Ödevi.
 
 ### GENEL BAKIŞ
 
-Bilge Koleji, Rize Güneysu’da bulunan bir kolejdir. Şimdilik Pilot uygulama olarak Lise bölümü seçilmiş olup, projenin beğenilmesi halinde anaokulu ve ilköğretim bölümlerine de uygulanacaktır.
+Bilge Koleji, XU’da bulunan bir kolejdir. Şimdilik Pilot uygulama olarak Lise bölümü seçilmiş olup, projenin beğenilmesi halinde anaokulu ve ilköğretim bölümlerine de uygulanacaktır.
 
 Proje, aşağıdaki maddeleri amaçlamaktadır:
 
