@@ -1,0 +1,240 @@
+@using System.Web.Optimization
+
+<!DOCTYPE html>
+<!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 2.3.1
+Version: 1.1.2
+Author: KeenThemes
+Website: http://www.keenthemes.com/preview/?theme=metronic
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469
+-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Bilge Koleji | LBozan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    @Styles.Render("~/Content/css")
+    @RenderSection("RootStyle", required: false)
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top">
+        <!-- BEGIN TOP NAVIGATION BAR -->
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <!-- BEGIN LOGO -->
+                <a class="brand" href="index.html">
+                    <img src="@Url.Content("~/Content/img/logo.png")" alt="logo" />
+                </a>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                    <img src="@Url.Content("~/Content/img/menu-toggler.png")" alt="" />
+                </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <ul class="nav pull-right">
+                    <!-- BEGIN NOTIFICATION DROPDOWN -->
+                    <li class="dropdown" id="header_notification_bar">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-warning-sign"></i>
+                            <span class="badge">6</span>
+                        </a>
+                        <ul class="dropdown-menu extended notification">
+                            <li>
+                                <p>You have 14 new notifications</p>
+                            </li>
+                            <li>
+                                <a href="javascript:;" onclick="App.onNotificationClick(1)">
+                                    <span class="label label-success"><i class="icon-plus"></i></span>
+                                    New user registered.
+                                    <span class="time">Just now</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-important"><i class="icon-bolt"></i></span>
+                                    Database overloaded 68%.
+                                    <span class="time">2 hrs</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-important"><i class="icon-bolt"></i></span>
+                                    2 user IP blocked.
+                                    <span class="time">5 hrs</span>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="#">See all notifications <i class="m-icon-swapright"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END NOTIFICATION DROPDOWN -->
+                    <!-- BEGIN INBOX DROPDOWN -->
+                    <li class="dropdown" id="header_inbox_bar">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-envelope-alt"></i>
+                            <span class="badge">5</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <li>
+                                <p>You have 12 new messages</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="photo"><img src="@Url.Content("~/Content/img/avatar2.jpg")" alt="" /></span>
+                                    <span class="subject">
+                                        <span class="from">Lisa Wong</span>
+                                        <span class="time">Just Now</span>
+                                    </span>
+                                    <span class="message">
+                                        Vivamus sed auctor nibh congue nibh. auctor nibh
+                                        auctor nibh...
+                                    </span>
+                                </a>
+                            </li>
+                           
+                            <li>
+                                <a href="#">
+                                    <span class="photo"><img src="@Url.Content("~/Content/img/avatar1.jpg")" alt="" /></span>
+                                    <span class="subject">
+                                        <span class="from">Bob Nilson</span>
+                                        <span class="time">2 hrs</span>
+                                    </span>
+                                    <span class="message">
+                                        Vivamus sed nibh auctor nibh congue nibh. auctor nibh
+                                        auctor nibh...
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="#">See all messages <i class="m-icon-swapright"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END INBOX DROPDOWN -->
+                    <!-- BEGIN TODO DROPDOWN -->
+                    <li class="dropdown" id="header_task_bar">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-tasks"></i>
+                            <span class="badge">5</span>
+                        </a>
+                        <ul class="dropdown-menu extended tasks">
+                            <li>
+                                <p>You have 12 pending tasks</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="task">
+                                        <span class="desc">New release v1.2</span>
+                                        <span class="percent">30%</span>
+                                    </span>
+                                    <span class="progress progress-success ">
+                                        <span style="width: 30%;" class="bar"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="task">
+                                        <span class="desc">Web server upgrade</span>
+                                        <span class="percent">58%</span>
+                                    </span>
+                                    <span class="progress progress-info">
+                                        <span style="width: 58%;" class="bar"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="task">
+                                        <span class="desc">Mobile development</span>
+                                        <span class="percent">85%</span>
+                                    </span>
+                                    <span class="progress progress-success">
+                                        <span style="width: 85%;" class="bar"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="#">See all tasks <i class="m-icon-swapright"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END TODO DROPDOWN -->
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <li class="dropdown user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img alt="" src="@Url.Content("~/Content/img/avatar1_small.jpg")" />
+                            <span class="username">Bob Nilson</span>
+                            <i class="icon-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="extra_profile.html"><i class="icon-user"></i> Profilim</a></li>
+
+                            <li><a href="#"><i class="icon-tasks"></i> My Tasks</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("Cikis","Anasayfa")"><i class="icon-key"></i> Oturumu Kapat</a></li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                </ul>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+        </div>
+        <!-- END TOP NAVIGATION BAR -->
+    </div>
+    <!-- END HEADER -->
+    <!-- Govde -->
+
+    <div class="page-container row-fluid">
+
+        @RenderBody()
+
+    </div>
+
+    <!-- BEGIN FOOTER -->
+    <div class="footer">
+        2013 &copy; LBozan.
+        <div class="span pull-right">
+            <span class="go-top"><i class="icon-angle-up"></i></span>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+    <!-- BEGIN JAVASCRIPTS -->
+    <!-- Load javascripts at bottom, this will reduce page load time -->
+
+    <!--[if lt IE 9]>
+     <script src="assets/js/excanvas.js"></script>
+     <script src="assets/js/respond.js"></script>
+     <![endif]-->
+
+     @Scripts.Render("~/Scripts/jquery")
+     
+     @RenderSection("RootScripts",required:false)
+
+    <script>
+        jQuery(document).ready(function () {
+            @RenderSection("RootApp", required: false)
+            // set current page
+            
+            App.init(); // init the rest of plugins and elements
+        });
+    </script>
+    <!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
