@@ -1,0 +1,34 @@
+@model BilgeKolejProject.OgrenciDurum
+
+@{
+    ViewBag.Title = "Ogrenci Durum Sil";
+    Layout = "~/Views/Shared/_YonetimLayout.cshtml";
+}
+
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN VALIDATION STATES-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <h4><i class="icon-reorder"></i>@ViewBag.Title</h4>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"></a>
+                </div>
+            </div>
+            <div class="portlet-body form">
+                <h3 class="block">@Model.DurumAdi Durumu silmek istemekten eminmisiniz.?</h3>
+                <!-- BEGIN FORM-->
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-actions">
+                        <button type="submit" class="btn red">(Evet) Sil</button>
+                        <a href="@Url.Action("OgrenciDurumListesi")" class="btn">İptal</a>
+                    </div>
+                }
+
+                <!-- END FORM-->
+            </div>
+        </div>
+    </div>
+</div>
